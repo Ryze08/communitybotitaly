@@ -13,7 +13,7 @@ client.on("guildMemberAdd", member => {
         .setDescription(`${member.toString()} Ti diamo il benvenuto su ${member.guild.name}, ti ricordiamo che questa è una community basata sul server <#983394120313737286>`)
         .setThumbnail("https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg")
         .setTimestamp()
-        .setFooter ({ text: "Italian Full RP",iconURL:"https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg"});
+        .setFooter ({ text: "Community Italy Full RP"});
 
     client.channels.cache.get("966828152699637790").send({embeds: [embed]}); 
 })
@@ -31,7 +31,7 @@ client.on("messageCreate", message => {
                 .setTitle("<a:annuncio3:972113993818861618>__ANNUNCIO DALLO STAFF__<a:annuncio3:972113993818861618>")
                 .setDescription(`${testo} \n \n **__ANNUNCIO FATTO DALLO STAFFER__** <a:FrecciaDestra:967914947541618739> ${message.author.toString()}`) //Testo
                 .setTimestamp()
-                .setFooter ({ text: "Italian Full RP",iconURL:"https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg"});
+                .setFooter ({ text: "Community Italy Full RP"});
             message.delete()
             message.channel.send({embeds: [embedme]});
     }
@@ -51,7 +51,7 @@ client.on("messageCreate", message => {
                 .setTitle("<a:Attenzione:969898344530997260>__SONDAGGIO__<a:Attenzione:969898344530997260>")
                 .setDescription(`${message.author.toString()} <a:FrecciaDestra:969898345466318878> ${testo}`) //Testo
                 .setTimestamp()
-                .setFooter ({ text: "Italian Full RP",iconURL:"https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg"});
+                .setFooter ({ text: "Community Italy Full RP"});
             message.delete()
             message.channel.send({embeds: [sondaggio]})
             .then(msg => {
