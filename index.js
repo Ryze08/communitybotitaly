@@ -4,52 +4,16 @@ const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_
 client.login(process.env.token)
 
 
-//MESSAGGIO IN EMBED//
-client.on("messageCreate", message => {
-    if (message.content.startsWith("!embed")) {
-            var args = message.content.split(/\s+/);
-            var testo;
-            testo = args.slice(1).join(" ");
+//BENVENUTO
+client.on("guildMemberAdd", member => {
+    if (member.user.bot) return
+    var embed = new Discord.MessageEmbed()
+        .setColor("#09fc00")
+        .setTitle("🇮🇹 • 𝐈𝐓𝐀𝐋𝐈𝐀𝐍 𝐅𝐔𝐋𝐋 𝐑𝐏 [𝐗𝐁𝐎𝐗] • 🇮🇹")
+        .setDescription(`${member.toString()} Ti diamo il benvenuto su ${member.guild.name}, ti ricordiamo che questa è una community basata sul server <#983394120313737286>`)
+        .setThumbnail("https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg")
+        .setTimestamp()
+        .setFooter ({ text: "Italian Full RP",iconURL:"https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg"});
 
-            var embedme = new Discord.MessageEmbed()
-                .setColor("#ed00ff")
-                .setDescription(` ${testo}`) //Testo
-                .setTimestamp()
-                .setFooter ({ text: "Ryze Community"});
-            message.delete()
-            message.channel.send({embeds: [embedme]});
-    }
-})
-
-
-//MENU//
-client.on("messageCreate", message => {
-    if(message.content == "!help"){
-        let embed = new Discord.MessageEmbed()
-        .setTitle("Menù Help")
-        .setPlaceholder("Seleziona una pagni")
-        .setMinValues(1)
-        .setMaxValues(1)
-        .addOptions([
-            {
-                label: "Pagina 1",
-                description: "Vai alla pagina numero 1",
-                value: "pagina1"
-            },
-            {
-                label: "Pagina 2",
-                description: "Vai alla pagina numero 2",
-                value: "pagina2"
-            },
-            {
-                label: "Pagina 3",
-                description: "Vai alla pagina numero 3",
-                value: "pagina3"
-            }
-        ])
-        let row = new Discord.MessageActionRow()
-        .addComponents(select)
-
-        message.channel.send({ embeds: [embed], components: [row] })
-    }
+    client.channels.cache.get("979081171910668288").send({embeds: [embed]}); 
 })
