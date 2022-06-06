@@ -15,5 +15,5 @@ client.on("guildMemberAdd", member => {
         .setTimestamp()
         .setFooter ({ text: "Italian Full RP",iconURL:"https://cdn.discordapp.com/attachments/956549530541764628/979750660381765632/AB5F2015-0F31-4FA8-A86D-A5E0E2E19ED2.jpg"});
 
-    client.channels.cache.get("979081171910668288").send({embeds: [embed]}); 
+    client.channels.cache.get("966828152699637790").send({embeds: [embed]}); 
 })
