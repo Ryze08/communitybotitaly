@@ -61,3 +61,23 @@ client.on("messageCreate", message => {
 
     }
 })
+
+
+//SONDAGGIO//
+client.on("messageCreate", message => {
+    if (message.content.startsWith("!regolamentocifrp")) {
+            var args = message.content.split(/\s+/);
+            var testo;
+            testo = args.slice(1).join(" ");
+
+            var sondaggio = new Discord.MessageEmbed()
+                .setColor("#ff0005")
+                .setTitle("<:RULES:972085312752869396>__REGOLAMENTO 🇮🇹 • 𝐂𝐎𝐌𝐌𝐔𝐍𝐈𝐓𝐘 𝐈𝐓𝐀𝐋𝐈𝐀𝐍 𝐅𝐔𝐋𝐋 𝐑𝐏 • 🇮🇹__<:RULES:972085312752869396>")
+                .setDescription(" ⠀⠀ \n - Non insultare nessun membro ne in chat testuali che in chat vocali \n - Portare rispetto ai membri ma SOPRATUTTO ai membri dello <@&967928512688291891> \n - Non inviare link di altri server \n - Non pronunciare l' N word (neanche per scherzo) \n - Non spammare messaggi in chat \n - Non menzionare lo <@&967928512688291891> in chat (se avete bisogno di contattare lo staff esistono i ticket)") //Testo
+                .setTimestamp()
+                .setFooter ({ text: "Community Italy Full RP"});
+            message.delete()
+            message.channel.send({embeds: [sondaggio]})
+
+    }
+})
