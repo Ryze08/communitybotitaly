@@ -73,7 +73,7 @@ client.on("messageCreate", message => {
             var sondaggio = new Discord.MessageEmbed()
                 .setColor("#ff0005")
                 .setTitle("<:Rules:983422159026257950>__REGOLAMENTO COMMUNITY ITALY FULL RP__<:Rules:983422159026257950>")
-                .setDescription(" ⠀⠀ \n - Non insultare nessun membro ne in chat testuali che in chat vocali \n - Portare rispetto ai membri ma SOPRATUTTO ai membri dello <@&983421751348310036> \n - Non inviare link di altri server \n - Non pronunciare l' N word (neanche per scherzo) \n - Non spammare messaggi in chat \n - Non menzionare lo <@&983421751348310036> in chat (se avete bisogno di contattare lo staff esistono i ticket) \n ⠀⠀") //Testo
+                .setDescription(" ⠀⠀ \n - Non insultare nessun membro ne in chat testuali che in chat vocali \n - Portare rispetto ai membri ma SOPRATUTTO ai membri dello <@&966828088191246377> \n - Non inviare link di altri server \n - Non pronunciare l' N word (neanche per scherzo) \n - Non spammare messaggi in chat \n - Non menzionare lo <@&966828088191246377> in chat (se avete bisogno di contattare lo staff esistono i ticket) \n ⠀⠀") //Testo
                 .setTimestamp()
                 .setFooter ({ text: "Community Italy Full RP"});
             message.delete()
